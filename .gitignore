@@ -1,6 +1,8 @@
-FlyBird/Temp
+FlyBird/.idea
+FlyBird/Assets/Plugins/Editor/JetBrains*
 FlyBird/Library
-FlyBird/FlyBird/Library
+CachServerInfo/Library/*
+FlyBird/Temp
 FlyBird/Library/ScriptAssemblies
 FlyBird/.idea/
 Assets/Plugins/Editor/JetBrains

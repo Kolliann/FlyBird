@@ -3,7 +3,7 @@
 public class Bird : MonoBehaviour
 {
     //how much it takes off
-    private static float UpForce = 200f;
+    public static float UpForce = 200f;
 
     //it's die player or no
     private static bool _isDead;
@@ -24,18 +24,23 @@ public class Bird : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                _rb2D.velocity = Vector2.zero;
-                _rb2D.AddForce(new Vector2(100, UpForce));
                 //Play animation fly 
                 _anim.SetTrigger("Flap");
+                _rb2D.velocity = Vector2.zero;
+                _rb2D.AddForce(new Vector2(0, UpForce));
+                
             }
         }
     }
 
-    private void OnCollisionEnter2D()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        _isDead = true;
+        _rb2D.velocity = Vector2.zero;
         //Play animation die 
         _anim.SetTrigger("Die");
+
+        _isDead = true;
+        
+        GameController.instance.BirdDie();
     }
 }
