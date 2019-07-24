@@ -2,7 +2,8 @@ FlyBird/Temp
 FlyBird/Library
 FlyBird/FlyBird/Library
 FlyBird/Library/ScriptAssemblies
-
+FlyBird/.idea/
+Assets/Plugins/Editor/JetBrains
 # This .gitignore file should be placed at the root of your Unity project directory
 /[Ll]ibrary/
 /[Tt]emp/

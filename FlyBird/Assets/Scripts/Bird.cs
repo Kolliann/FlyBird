@@ -1,40 +1,41 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
+    //how much it takes off
+    private static float UpForce = 200f;
 
-    public float upForce = 200f;
-    
-    //мертв ли игрок
-    private bool isDead = false;
+    //it's die player or no
+    private static bool _isDead;
+    private static Rigidbody2D _rb2D;
+    private static Animator _anim;
 
-    private Rigidbody2D rb2d;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        _rb2D = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (isDead == false)
+        if (_isDead == false)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                
-                rb2d.velocity = Vector2.zero;
-                rb2d.AddForce(new Vector2(0, upForce));
+                _rb2D.velocity = Vector2.zero;
+                _rb2D.AddForce(new Vector2(100, UpForce));
+                //Play animation fly 
+                _anim.SetTrigger("Flap");
             }
         }
     }
 
     private void OnCollisionEnter2D()
     {
-
-        isDead = true;
-
+        _isDead = true;
+        //Play animation die 
+        _anim.SetTrigger("Die");
     }
 }

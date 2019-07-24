@@ -8,6 +8,39 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="689371649">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="220" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="220" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="targets" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="MsBuild targets file" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -18,16 +51,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Bird.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="432">
+              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
               <folding>
-                <marker date="1563909581244" expanded="true" signature="6:78" ph="..." />
-                <marker date="1563909581244" expanded="true" signature="113:754" ph="{...}" />
-                <marker date="1563909581244" expanded="true" signature="309:365" ph="{...}" />
-                <marker date="1563909581244" expanded="true" signature="423:676" ph="{...}" />
-                <marker date="1563909581244" expanded="true" signature="458:670" ph="{...}" />
-                <marker date="1563909581244" expanded="true" signature="513:660" ph="{...}" />
-                <marker date="1563909581244" expanded="true" signature="715:752" ph="{...}" />
+                <marker date="1563950070297" expanded="true" signature="53:964" ph="{...}" />
+                <marker date="1563950070297" expanded="true" signature="338:437" ph="{...}" />
+                <marker date="1563950070297" expanded="true" signature="503:824" ph="{...}" />
+                <marker date="1563950070297" expanded="true" signature="539:818" ph="{...}" />
+                <marker date="1563950070297" expanded="true" signature="594:808" ph="{...}" />
+                <marker date="1563950070297" expanded="true" signature="863:962" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -48,10 +80,17 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-233" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -63,11 +102,24 @@
         <option name="show-all-files" value="false" />
       </pane>
       <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-hidden-items" value="false" />
-        <option name="show-project-names" value="true" />
       </pane>
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -91,17 +143,19 @@
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
-      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
-      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -115,11 +169,15 @@
       <updated>1563127264233</updated>
       <workItem from="1563127278154" duration="359000" />
       <workItem from="1563907980625" duration="3129000" />
+      <workItem from="1563948527641" duration="277000" />
+      <workItem from="1563948828929" duration="165000" />
+      <workItem from="1563949081966" duration="154000" />
+      <workItem from="1563949257678" duration="812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3488000" />
+    <option name="totallyTimeSpent" value="4896000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -131,9 +189,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26385927" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -150,10 +209,11 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Unity" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Build" order="16" visible="true" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -168,6 +228,9 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -179,21 +242,27 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/Microsoft.Common.CurrentVersion.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="1125" column="4" selection-start-line="1125" selection-start-column="4" selection-end-line="1125" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://C:/Program Files/Unity/Hub/Editor/2019.1.10f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Bird.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="432">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
           <folding>
-            <marker date="1563909581244" expanded="true" signature="6:78" ph="..." />
-            <marker date="1563909581244" expanded="true" signature="113:754" ph="{...}" />
-            <marker date="1563909581244" expanded="true" signature="309:365" ph="{...}" />
-            <marker date="1563909581244" expanded="true" signature="423:676" ph="{...}" />
-            <marker date="1563909581244" expanded="true" signature="458:670" ph="{...}" />
-            <marker date="1563909581244" expanded="true" signature="513:660" ph="{...}" />
-            <marker date="1563909581244" expanded="true" signature="715:752" ph="{...}" />
+            <marker date="1563950070297" expanded="true" signature="53:964" ph="{...}" />
+            <marker date="1563950070297" expanded="true" signature="338:437" ph="{...}" />
+            <marker date="1563950070297" expanded="true" signature="503:824" ph="{...}" />
+            <marker date="1563950070297" expanded="true" signature="539:818" ph="{...}" />
+            <marker date="1563950070297" expanded="true" signature="594:808" ph="{...}" />
+            <marker date="1563950070297" expanded="true" signature="863:962" ph="{...}" />
           </folding>
         </state>
       </provider>
