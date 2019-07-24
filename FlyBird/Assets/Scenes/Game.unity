@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameOverText: {fileID: 1770001284}
-  _gameOver: 0
+  _gameOver: 1
 --- !u!4 &331501171
 Transform:
   m_ObjectHideFlags: 0
