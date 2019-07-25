@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="B:\FlyBird\FlyBird" t="IncludeRecursive">
+    <e p="C:\Users\Nikolay\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Nikolay\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Nikolay\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_FlyBird.917883360.00" t="ExcludeRecursive" />
+    <e p="D:\FlyBird\FlyBird" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Bird.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
+          <e p="RepeatingBackground.cs" t="Include" />
+          <e p="ScrollingObject.cs" t="Include" />
         </e>
       </e>
       <e p="FlyBird.sln" t="IncludeFlat" />
@@ -17,7 +22,5 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
-    <e p="C:\Users\Nikolay\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Nikolay\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_FlyBird.895251106.00" t="ExcludeRecursive" />
   </component>
 </project>

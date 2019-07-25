@@ -1,33 +1,37 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Bird : MonoBehaviour
 {
     //how much it takes off
-    public static float UpForce = 200f;
+    public  float UpForce = 200f;
 
     //it's die player or no
-    private static bool _isDead;
-    private static Rigidbody2D _rb2D;
-    private static Animator _anim;
+    public static bool IsDead;
+    [FormerlySerializedAs("_rb2D")] 
+    public  Rigidbody2D Rb2D;
+    [FormerlySerializedAs("_anim")]
+    public  Animator Anim;
 
     // Start is called before the first frame update
     private void Start()
     {
-        _rb2D = GetComponent<Rigidbody2D>();
-        _anim = GetComponent<Animator>();
+        //
+       // _rb2D = GetComponent<Rigidbody2D>();
+       // _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (_isDead == false)
+        if (IsDead == false)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 //Play animation fly 
-                _anim.SetTrigger("Flap");
-                _rb2D.velocity = Vector2.zero;
-                _rb2D.AddForce(new Vector2(0, UpForce));
+                Anim.SetTrigger("Flap");
+                Rb2D.velocity = Vector2.zero;
+                Rb2D.AddForce(new Vector2(0, UpForce));
                 
             }
         }
@@ -35,12 +39,12 @@ public class Bird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        _rb2D.velocity = Vector2.zero;
+        Rb2D.velocity = Vector2.zero;
         //Play animation die 
-        _anim.SetTrigger("Die");
+        Anim.SetTrigger("Die");
 
-        _isDead = true;
+        IsDead = true;
         
-        GameController.instance.BirdDie();
+        GameController.Instance.BirdDie();
     }
 }

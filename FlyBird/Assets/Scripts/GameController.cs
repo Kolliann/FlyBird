@@ -1,23 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController instance;
-    public  GameObject _gameOverText;
+    public static GameController Instance;
+    
+    [FormerlySerializedAs("_gameOverText")] 
+    public  GameObject GameOverText;
 
-    public  bool _gameOver = false;
+    [FormerlySerializedAs("_gameOver")]
+    public  bool GameOver = false;
+    
+    public float ScrollSpeed = -1.5f;
     
     // Start is called before the first frame update
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
-        }else if (instance != this)
+            Instance = this;
+        }else if (Instance != this)
         {
             Destroy(gameObject);
         }
@@ -26,18 +30,17 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_gameOver == true && Input.GetMouseButtonDown(0))
+        if (GameOver && Input.GetMouseButtonDown(0))
         {
-            _gameOver = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+            Bird.IsDead = false;
         }
     }
 
     public void BirdDie()
     {
         
-        _gameOverText.SetActive(true);
-        _gameOver = true;
+        GameOverText.SetActive(true);
+        GameOver = true;
     }
 }
