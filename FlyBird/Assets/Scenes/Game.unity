@@ -235,6 +235,7 @@ MonoBehaviour:
   GameOverText: {fileID: 1770001284}
   GameOver: 0
   ScrollSpeed: -1.5
+  scoreText: {fileID: 649740773}
 --- !u!4 &331501171
 Transform:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 1820154225
+  m_SortingLayerID: 1756651603
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &445348954
@@ -790,7 +791,7 @@ PrefabInstance:
     - target: {fileID: 2929756581826560716, guid: 7d79016b9fb54dd47be8364b57695e49,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.25
+      value: 27.30667
       objectReference: {fileID: 0}
     - target: {fileID: 2929756581826560716, guid: 7d79016b9fb54dd47be8364b57695e49,
         type: 3}
