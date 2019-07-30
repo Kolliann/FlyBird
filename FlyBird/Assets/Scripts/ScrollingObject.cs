@@ -10,12 +10,14 @@ public class ScrollingObject : MonoBehaviour
     void Start()
     {
         _rb2D = GetComponent<Rigidbody2D>();
+        //Start the object moving.
         _rb2D.velocity  = new Vector2(GameController.Instance.ScrollSpeed, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // If the game is over, stop scrolling.
         if (GameController.Instance.GameOver == true)
         {
             _rb2D.velocity = Vector2.zero;
