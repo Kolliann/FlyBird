@@ -9,4 +9,14 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void ExistGame()
+    {
+        Application.Quit();
+    }
+    
+    public void BackMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

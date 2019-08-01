@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     [FormerlySerializedAs("_gameOver")]
     public bool GameOver = false;
 
+
     public float ScrollSpeed = -1.5f;
 
     private int _score = 0;
@@ -42,10 +43,12 @@ public class GameController : MonoBehaviour
     void Update()
     {
         //If the game is over and the player has pressed some input...
-        if (GameOver && Input.GetMouseButtonDown(0))
+       if (GameOver && Input.GetMouseButtonDown(0))
+        //if (GameOver && gameOverBtn.)
         {
             //...reload the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene("Menu");
             Bird.IsDead = false;
         }
     }
