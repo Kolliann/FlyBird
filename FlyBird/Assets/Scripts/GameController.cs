@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -18,8 +19,10 @@ public class GameController : MonoBehaviour
     public float ScrollSpeed = -1.5f;
 
     private int _score = 0;
+    private int _CoinsScore = 0;
 
     [FormerlySerializedAs("scoreText")] public Text ScoreText;
+    [FormerlySerializedAs("coinsText")] public Text CoinsText;
 
     // Start is called before the first frame update
     private void Awake()
@@ -38,9 +41,17 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins"));
+        _CoinsScore = PlayerPrefs.GetInt("Coins");
+        CoinsText.text = "Coins: " + _CoinsScore;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        
         //If the game is over and the player has pressed some input...
         if (GameOver && Input.GetMouseButtonDown(0))
         {
@@ -61,8 +72,34 @@ public class GameController : MonoBehaviour
         ScoreText.text = "Score: " + _score;
     }
 
+    public void CoinsScore()
+    {
+        
+        if (PlayerPrefs.GetInt("Coins") == 0)
+        {
+            _CoinsScore++;
+            PlayerPrefs.SetInt("Coins", _CoinsScore);
+            PlayerPrefs.Save();
+            CoinsText.text = "Coins: " + _CoinsScore;
+        }
+        else
+        {
+            _CoinsScore = PlayerPrefs.GetInt("Coins");
+            
+            _CoinsScore++;
+        
+            CoinsText.text = "Coins: " + _CoinsScore;
+            Debug.Log("Coins" + _CoinsScore);
+            PlayerPrefs.SetInt("Coins", _CoinsScore);
+            PlayerPrefs.Save();
+        }
+        
+    }
+
     public void BirdDie()
     {
+        PlayerPrefs.SetInt("Coins", _CoinsScore);
+        PlayerPrefs.Save();
         //Activate the game over text.
         GameOverText.SetActive(true);
         //Set the game to be over.
