@@ -2,8 +2,42 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="B:\FlyBird\FlyBird" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AppMetrica" t="Include">
+          <e p="AppMetrica.cs" t="Include" />
+          <e p="BaseYandexAppMetrica.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="PostprocessBuildPlayerAppMetrica.cs" t="Include" />
+          </e>
+          <e p="ExampleUI" t="Include">
+            <e p="AnotherSceneManager.cs" t="Include" />
+            <e p="MainSceneManager.cs" t="Include" />
+            <e p="PopUp.cs" t="Include" />
+          </e>
+          <e p="IYandexAppMetrica.cs" t="Include" />
+          <e p="Profile" t="Include">
+            <e p="YandexAppMetricaAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaBirthDateAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaBooleanAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaCounterAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaGenderAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaNameAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaNotificationsEnabledAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaNumberAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaStringAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaUserProfile.cs" t="Include" />
+            <e p="YandexAppMetricaUserProfileUpdate.cs" t="Include" />
+          </e>
+          <e p="YandexAppMetricaAndroid.cs" t="Include" />
+          <e p="YandexAppMetricaConfig.cs" t="Include" />
+          <e p="YandexAppMetricaDummy.cs" t="Include" />
+          <e p="YandexAppMetricaError.cs" t="Include" />
+          <e p="YandexAppMetricaIOS.cs" t="Include" />
+          <e p="YandexAppMetricaRevenue.cs" t="Include" />
+          <e p="YMMJSONUtils.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Bird.cs" t="Include" />
           <e p="Coins.cs" t="Include" />

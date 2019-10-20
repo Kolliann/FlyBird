@@ -51,14 +51,15 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        //If the game is over and the player has pressed some input...
+
+        /*
+         //If the game is over and the player has pressed some input...
         if (GameOver && Input.GetMouseButtonDown(0))
         {
             //...reload the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Bird.IsDead = false;
-        }
+        }*/
     }
 
     public void BirdScore()
@@ -95,7 +96,20 @@ public class GameController : MonoBehaviour
         }
         
     }
+//
+    public void Reload()
+    {
+        //...reload the current scene.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Bird.IsDead = false;
+    }
 
+    public void LoadMenu()
+    {
+
+        SceneManager.LoadScene("Menu");
+    }
+    
     public void BirdDie()
     {
         PlayerPrefs.SetInt("Coins", _CoinsScore);
