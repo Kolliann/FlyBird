@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -112,11 +113,19 @@ public class GameController : MonoBehaviour
     
     public void BirdDie()
     {
-        PlayerPrefs.SetInt("Coins", _CoinsScore);
-        PlayerPrefs.Save();
+        Save();
+       
         //Activate the game over text.
         GameOverText.SetActive(true);
         //Set the game to be over.
         GameOver = true;
+    }
+
+    private void Save()
+    {
+        if(PlayerPrefs.GetInt("BestScore") < _score)
+            PlayerPrefs.SetInt("BestScore", _score);
+        PlayerPrefs.SetInt("Coins", _CoinsScore);
+        PlayerPrefs.Save();
     }
 }
