@@ -13,9 +13,15 @@ public class MenuController : MonoBehaviour
     {
         text.text = String.Format("Best: {0}", PlayerPrefs.GetInt("BestScore"));
     }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void OpenShop()
+    {
+        SceneManager.LoadScene("Shop");
     }
 
     public void ExistGame()
