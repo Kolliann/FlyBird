@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using GoogleMobileAds.Api;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
+    
     public Text text;
+    public Text textCoins;
 
     private void Start()
     {
+        
         text.text = String.Format("Best: {0}", PlayerPrefs.GetInt("BestScore"));
+        textCoins.text = String.Format("Coins: {0}", PlayerPrefs.GetInt("Coins"));
     }
 
     public void PlayGame()
@@ -22,6 +27,11 @@ public class MenuController : MonoBehaviour
     public void OpenShop()
     {
         SceneManager.LoadScene("Shop");
+    }
+    
+    public void OpenPrestige()
+    {
+        SceneManager.LoadScene("Prestige");
     }
 
     public void ExistGame()

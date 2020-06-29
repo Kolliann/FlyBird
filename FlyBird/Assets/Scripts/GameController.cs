@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
 
     public float ScrollSpeed = -1.5f;
 
+    public PrestigeController gg;
+
     private int _score = 0;
     private int _CoinsScore = 0;
 
@@ -47,6 +49,7 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins"));
         _CoinsScore = PlayerPrefs.GetInt("Coins");
         CoinsText.text = "Coins: " + _CoinsScore;
+        
     }
 
     // Update is called once per frame
@@ -127,5 +130,7 @@ public class GameController : MonoBehaviour
             PlayerPrefs.SetInt("BestScore", _score);
         PlayerPrefs.SetInt("Coins", _CoinsScore);
         PlayerPrefs.Save();
+        
+        gg.SendPrestigeOnServer();
     }
 }
