@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour
     
     public Text text;
     public Text textCoins;
+    
 
     private void Start()
     {

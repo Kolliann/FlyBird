@@ -16,9 +16,7 @@ public class Coins : MonoBehaviour
             //If the bird hits the trigger collider in between the columns then
             //tell the game control that the bird scored
             GameController.Instance.CoinsScore();
-        
             CoinsPrefab.SetActive(false);
-            
         }
             
     }

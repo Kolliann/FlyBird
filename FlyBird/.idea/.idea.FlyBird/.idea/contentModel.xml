@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="B:\FlyBird\FlyBird" t="IncludeRecursive">
+    <e p="C:\Users\Nikolay Lyakh\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Nikolay Lyakh\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_FlyBird.1499845086.00" t="ExcludeRecursive" />
+    <e p="D:\MyProjects\Birds\FlyBird" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -135,14 +137,9 @@
         </e>
       </e>
       <e p="FlyBird.sln" t="IncludeFlat" />
-      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Nikolay\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Nikolay\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_FlyBird.895251106.00" t="ExcludeRecursive" />
   </component>
 </project>

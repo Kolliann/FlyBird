@@ -28,13 +28,14 @@ public class MoneyPool : MonoBehaviour
 
     //A holding position for our unused columns offscreen.
     private Vector2 objectPoolPosition = new Vector2(-15f, -25f);
-    private float _timeSinceLastSpawned;
+    private float _timeSinceLastSpawned = 1f;
     private float spawnXPosition = 10f;
     private int _currentColumn = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+       
         _Coins = new GameObject[CoinsPoolSize];
         //Loop through the collection.
         for (int i = 0; i < CoinsPoolSize; i++)
@@ -46,7 +47,8 @@ public class MoneyPool : MonoBehaviour
 
     //This spawns columns as long as the game is not over.
     void Update()
-    {
+    { 
+        CoinsPrefab.SetActive(true);
         _timeSinceLastSpawned += Time.deltaTime;
 
         if (GameController.Instance.GameOver == false && _timeSinceLastSpawned >= SpawnRate)
