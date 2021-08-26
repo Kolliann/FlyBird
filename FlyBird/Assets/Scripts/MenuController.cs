@@ -1,20 +1,23 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using GoogleMobileAds.Api;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class MenuController : MonoBehaviour
 {
-    
     public Text text;
     public Text textCoins;
 
     private void Start()
     {
-        
+        // инитим видео нужно вынести в отдельный скрипт 
+        if (Advertisement.isSupported)
+        {
+            // id выдал Unity 
+            Advertisement.Initialize("4140195", false);
+        }
+
         text.text = String.Format("Best: {0}", PlayerPrefs.GetInt("BestScore"));
         textCoins.text = String.Format("Coins: {0}", PlayerPrefs.GetInt("Coins"));
     }
@@ -45,5 +48,13 @@ public class MenuController : MonoBehaviour
     public void BackMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+    public void ShowAds()
+    {
+        //чекаем если подгрузилась реклама показываем видео
+        if (Advertisement.IsReady())
+        {
+            Advertisement.Show("video");
+        }
     }
 }
