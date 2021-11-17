@@ -9,7 +9,8 @@
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
-using UnityEditor.iOS.Xcode;
+//Nikolay: акомментил так как не установил версию ios
+//using UnityEditor.iOS.Xcode;
 using System.IO;
 using System.Collections;
 
@@ -56,29 +57,29 @@ public class PostprocessBuildPlayerAppMetrica
         if (buildTarget == expectedTarget) {
             var projectPath = path + "/Unity-iPhone.xcodeproj/project.pbxproj";
 
-            var project = new PBXProject ();
-            project.ReadFromString (File.ReadAllText (projectPath));
+            //var project = new PBXProject ();
+           // project.ReadFromString (File.ReadAllText (projectPath));
 
 #if UNITY_2019_3_OR_NEWER
-            var target = project.GetUnityFrameworkTargetGuid();
+          //  var target = project.GetUnityFrameworkTargetGuid();
 #else
             var target = project.TargetGuidByName ("Unity-iPhone");
 #endif
 
             foreach (var frameworkName in StrongFrameworks) {
-                project.AddFrameworkToProject (target, frameworkName + ".framework", false);
+            //    project.AddFrameworkToProject (target, frameworkName + ".framework", false);
             }
             foreach (var frameworkName in WeakFrameworks) {
-                project.AddFrameworkToProject (target, frameworkName + ".framework", true);
+              //  project.AddFrameworkToProject (target, frameworkName + ".framework", true);
             }
             foreach (var flag in LDFlags) {
-                project.AddBuildProperty (target, "OTHER_LDFLAGS", flag);
+             //   project.AddBuildProperty (target, "OTHER_LDFLAGS", flag);
             }
             foreach (var libraryName in Libraries) {
-                project.AddBuildProperty (target, "OTHER_LDFLAGS", "-l" + libraryName);
+               // project.AddBuildProperty (target, "OTHER_LDFLAGS", "-l" + libraryName);
             }
 
-            File.WriteAllText (projectPath, project.WriteToString ());
+           // File.WriteAllText (projectPath, project.WriteToString ());
         }
     }
 }
