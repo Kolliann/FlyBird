@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour
     private void Start()
     {
         
-        text.text = String.Format("Best: {0}", PlayerPrefs.GetInt("BestScoreasdvqrveeeeeeeeeeeeeeeeeeee"));
+        text.text = String.Format("Best: {0}", PlayerPrefs.GetInt("BestScoreCoins"));
         textCoins.text = String.Format("Coins: {0}", PlayerPrefs.GetInt("Coins"));
     }
 
